@@ -8,6 +8,8 @@ import './Example.css';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx.js';
 import '../../node_modules/prismjs/themes/prism.css';
+import example from "./Example";
+import states from "../states/States";
 
 /* eslint-disable  react/jsx-one-expression-per-line */
 /* eslint-disable  react/destructuring-assignment */
@@ -103,7 +105,8 @@ class Example extends React.Component {
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
+            <input type="text"/>
+          {example.exampleModel("christian","motto").message}  /* Prompt user for name  and motto/ set name in code
         </div>
 
         <p>

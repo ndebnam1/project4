@@ -14,8 +14,13 @@ if (models === undefined) {
   models = {};
 }
 
-models.exampleModel = function () {
+models.exampleModel = function (name,motto) {
+
   return {
-    name: "Unknown Name",
+    name : name,
+    motto : motto,
+    message:`Hello ${name}! \n You love to say: ${motto}!`
   };
 };
+
+
