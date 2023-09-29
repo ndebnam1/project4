@@ -103,7 +103,8 @@ class Example extends React.Component {
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
+          {models.exampleModel().name}
+          {models.exampleModel().motto}
         </div>
 
         <p>
