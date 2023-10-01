@@ -100,12 +100,13 @@ class Example extends React.Component {
   }
 
   render() {
+
     return (
       <div className="container Example">
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-            <input type="text"/>
+
           {example.exampleModel("christian","motto").message}  /* Prompt user for name  and motto/ set name in code
         </div>
 
