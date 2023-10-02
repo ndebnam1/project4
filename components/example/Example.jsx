@@ -8,8 +8,6 @@ import './Example.css';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx.js';
 import '../../node_modules/prismjs/themes/prism.css';
-import example from "./Example";
-import states from "../states/States";
 
 /* eslint-disable  react/jsx-one-expression-per-line */
 /* eslint-disable  react/destructuring-assignment */
@@ -24,10 +22,11 @@ class Example extends React.Component {
     // We can initialize it here.
     // We read the example model data into the state variable 'name'
     this.state = {
-      name: window.models.exampleModel().name,
-      counter: 0,
-      inputValue: '',
-      buttonWasClicked: '',
+        name: window.models.exampleModel().name,
+        motto: window.models.exampleModel().motto,
+        counter: 0,
+        inputValue: '',
+        buttonWasClicked: '',
     };
 
     // React events are called directly from DOM event handlers
@@ -35,6 +34,7 @@ class Example extends React.Component {
     // generate new functions that handle the event by just calling
     // the method that handles the event.
     this.handleChangeBound = event => this.handleChange(event);
+    this.handleMottoChangeBound = event => this.handleMottoChange(event);
     // Note: A commmon idiom in React code is to use JavaScript bind() to
     // smash the method to accomplish this passthrough to the method:
     //      this.handleChange = this.handleChange.bind(this);
@@ -68,9 +68,12 @@ class Example extends React.Component {
 
   // Method called when the input box is typed into.
   handleChange(event) {
-    this.setState({ inputValue: event.target.value });
+      this.setState({ inputValue: event.target.value });
   }
 
+  handleMottoChange(event) {
+      this.setState({ motto: event.target.value });
+  }
   // Method called when the button is pushed
   /* eslint-disable-next-line no-unused-vars */
   handleButtonClick(buttonName, event) {
@@ -100,14 +103,20 @@ class Example extends React.Component {
   }
 
   render() {
-
     return (
       <div className="container Example">
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-
-          {example.exampleModel("christian","motto").message}  /* Prompt user for name  and motto/ set name in code
+          {/* Your problem #1 motto displaying and updating widget goes here */}
+            {this.state.name}
+            <br/>
+            {this.state.motto}
+            <hr></hr>
+        </div>
+        <div>
+            <label htmlFor="mottoId">Change Motto: </label>
+            <input id="mottoId" type="text" value={this.state.motto} onChange={this.handleMottoChangeBound} />
         </div>
 
         <p>

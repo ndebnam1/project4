@@ -33,7 +33,8 @@ you use won't conflict with these names.
   font-family: Courier New, monospace;
 }
 
-.motto-update{
-  color: #00ff25;
-  text-shadow: #123018;
+.motto-update {
+  font-family: "Comic Sans MS", serif;
+  font-size: 16pt;
+  color: green;
 }
