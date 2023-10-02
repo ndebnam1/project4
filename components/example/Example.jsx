@@ -108,6 +108,7 @@ class Example extends React.Component {
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
+<<<<<<< HEAD
           {/* Your problem #1 motto displaying and updating widget goes here */}
             {this.state.name}
             <br/>
@@ -117,6 +118,10 @@ class Example extends React.Component {
         <div>
             <label htmlFor="mottoId">Change Motto: </label>
             <input id="mottoId" type="text" value={this.state.motto} onChange={this.handleMottoChangeBound} />
+=======
+          {models.exampleModel().name}
+          {models.exampleModel().motto}
+>>>>>>> main
         </div>
 
         <p>

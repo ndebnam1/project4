@@ -14,7 +14,11 @@ if (models === undefined) {
 
 models.exampleModel = function () {
   return {
+<<<<<<< HEAD
     name: "Christian Taylor",
     motto: "Keep moving forward..."
+=======
+    name: "Niles Debnam",
+>>>>>>> main
   };
 };
