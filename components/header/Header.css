@@ -8,9 +8,10 @@ div.header {
 }
 div.header:hover {
     transform: rotateY(360deg);
+    transform : scale(50%);
 }
 
 div.gradient {
     height: 100px;
-    background-image: linear-gradient(green, whitesmoke);
+    background-image: linear-gradient(purple, whitesmoke);
 }
