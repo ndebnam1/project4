@@ -5,6 +5,7 @@
   "description": "Project 4 - Learn ReactJS",
   "main": "webServer.js",
   "scripts": {
+    "start": "node webServer.js",
     "build": "webpack --devtool eval-cheap-module-source-map --output-pathinfo",
     "build:w": "webpack --devtool eval-cheap-module-source-map --output-pathinfo --watch",
     "lint": "eslint *.jsx components/*/*.jsx || exit 0"
